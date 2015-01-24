@@ -1,19 +1,19 @@
 # Dependencies
 markdown:         redcarpet
-pygments:         true
+highlights:       pygments
 
 # Permalinks
 permalink:        pretty
 
 # Setup
-title:            Poole
-tagline:          'The Jekyll Butler'
-description:      'Base theme for Jekyll themes by @mdo.'
-url:              http://getpoole.com
+title:            Drifts
+tagline:          'The new side of electronic music.'
+description:      'Bi-weekly electronic music radio show and podcast.'
+url:              http://next.drifts.fm
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'William Donaldson'
+  url:            https://twitter.com/wonaldson
 
 paginate:         1
 
@@ -21,4 +21,8 @@ paginate:         1
 version:          1.0.0
 
 github:
-  repo:           https://github.com/poole/poole
+  repo:           https://github.com/wonaldson/drifts.fm
+
+
+collections:
+- shows
