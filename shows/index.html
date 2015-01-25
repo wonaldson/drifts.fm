@@ -7,11 +7,11 @@ pagination: 6
 
 <div class="show-listing">
 	{% for show in site.shows %}
-	<div class="sl-item" style="background: {{ show.bg-color }}; color: {{ show.fg-color }}">
+	<div class="sl-item" style="background: {{ show.bg-color }} !important; color: {{ show.fg-color }} !important">
 	<a href="{{ show.url }}">
 		<img src="{{ site.cdn-base }}{{ site.image-base }}{{ show.id }}{{ site.image-extension }}" alt="{{ title }}" width="100%" />
 		<p color="{{show.fg-color}}"><strong>Show {{ show.id }}</strong>
-		{% if show.guest != null %} <small>featuring {{ show.guest }}</small>{% endif %}</p>
+		{% if show.guest != null %} <small>{{ show.guest }}</small>{% endif %}</p>
 	</a>
 	</div>
 	{% endfor %}
