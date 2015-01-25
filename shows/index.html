@@ -6,12 +6,11 @@ show-in-menu: true
 
 <div class="show-listing">
 	{% for show in site.shows %}
-	<div class="sl-item">
-	<a href="{{ show.baseurl }}">
-		<h1>Show {{ show.show-id }}</h1>
-		{% if show.guest != null %} <small>featuring {{ show.guest }}</small>{% endif %}
-		<img src="{{ show.img }}">
-		{{ show.excerpt }}
+	<div class="sl-item" style="background-color:{{ show.bg-color }};">
+	<a href="{{ show.url }}">
+		<h1 style="color: {{ show.fg-color }} !important">Show {{ show.id }}</h1>
+		{% if show.guest != null %} <small style="color: {{ show.fg-color }} !important">featuring {{ show.guest }}</small>{% endif %}
+		<img src="{{ site.cdn-base }}{{ site.image-base }}{{ show.id }}{{ site.image-extension }}" alt="{{ title }}" width="200" />
 	</a>
 	</div>
 	{% endfor %}

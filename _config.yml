@@ -34,12 +34,11 @@ collections:
 
 # Drifts vars
 
-fg-color: "#FFFFFF"
-bg-color: "#000000"
+fg-color: "#050505"
+bg-color: "#FFFFFF"
 link-color: "#FF0000"
 
 cdn-base: "http://cdn.drifts.fm/"
 image-base: "images/"
 podcast-base: "podcasts/"
 image-extension: ".png"
-podcast-basename: "drifts%spodcast.mp3"

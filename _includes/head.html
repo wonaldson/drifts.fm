@@ -21,16 +21,24 @@
   <!-- Custom colors -->
   <style>
 	  body {
-		  {% if page.bg-color %}
-		  background-color: {{ page.bg-color }} !important;
-		  {% endif %}{% if page.fg-color %}
-		  color: {{ page.fg-color }} !important;
-		  {% endif %}
+		  background-color: {{ include.bg-color }};
+		  color: {{ include.fg-color }}; 
 	  }  
+	  h1, h2, h3, h4, h5, h6 {
+		  color: {{ include.fg-color }};
+	  }
+	  
+	  small {
+		  color: {{ include.fg-color }};
+		  opacity: 0.8;
+		  font-weight: normal;
+	  }
+	  h1 small {
+		  font-size: 50% !important;
+		  font-weight: normal !important;
+	  }
 	  a {
-		  {% if page.link-color %}
-		  color: {{ page.link-color }} !important;
-		  {% endif %}
+		  color: {{ include.link-color }};
 	  }
 	</style>
   

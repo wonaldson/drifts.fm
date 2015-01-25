@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-
-  {% include head.html %}
+	
+	{% comment %} COLOR INCLUDES {% endcomment %}
+	{% if page.fg-color != null %}
+		{% assign fg = page.fg-color %}
+	{% else %}
+		{% assign fg = site.fg-color %}
+	{% endif %}
+	{% if page.bg-color != null %}
+		{% assign bg = page.bg-color %}
+	{% else %}
+		{% assign bg = site.bg-color %}
+	{% endif %}
+	{% if page.link-color != null %}
+		{% assign lc = page.link-color %}
+	{% else %}
+		{% assign lc = site.link-color %}
+	{% endif %}
+	
+  {% include head.html fg-color=fg bg-color=bg link-color=lc %}
 
   <body>
 

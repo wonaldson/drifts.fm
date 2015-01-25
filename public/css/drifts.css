@@ -300,6 +300,11 @@ tbody tr:nth-child(odd) th {
   letter-spacing: 0;
 }
 
+.active {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 /* Nav */
 
 nav.masthead-nav a {
@@ -311,6 +316,20 @@ nav.masthead-nav a:last-child {
 	padding-right: 0;
 }
 
+
+/* Show blocks */
+
+div.show-listing {
+	
+}
+
+div.sl-item {
+	
+}
+
+div.sl-item a {
+	text-decoration: none !important;
+}
 
 
 /*
