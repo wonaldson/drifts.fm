@@ -322,8 +322,8 @@ div.show-listing {
 
 div.sl-item {
 	float: left;
-	width: 11.6rem;
-	padding: 0.2rem;
+	width: 11rem;
+	padding: 0.5rem;
 	border-radius: 1rem;
 	margin-bottom: 1rem;
 	margin-right: 1rem;
@@ -331,16 +331,19 @@ div.sl-item {
 div.sl-item:nth-child(3) {
 	margin-right: 0;
 }
-div.sl-item a p {
+div.sl-item a > *, div.sl-item a > * > * {
 	color: inherit;
-	background-color: inherit;
 }
 
-
+div.sl-item p {
+	line-height: 1.125;
+	margin-bottom: 0.125rem;
+}
 div.sl-item a {
 	text-decoration: none !important;
 	color: inherit;
 	background-color: inherit;
+	text-align: center;
 }
 
 
