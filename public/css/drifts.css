@@ -455,3 +455,13 @@ a.pagination-item:hover {
     border-bottom-right-radius: 4px;
   }
 }
+
+
+.footer p {
+	font-size: 75%;
+	opacity: 75%;
+}
+span.copy {
+	font-size: larger;
+	vertical-align: sub;
+}
