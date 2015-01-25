@@ -7,8 +7,10 @@ layout: default
 <div class="page">
   <h1 class="page-title">Show {{ page.id }}</h1>
   {% if page.guest != null %}<small>{{ page.guest }}</small>{% endif %}
-	  <p><a href="{{ site.cdn-base }}{{ site.podcast-base }}{{ page.filename }}" title="{{ page.title }}" target="_blank">Download now &rarr;</a></p>
+ <p width="100%">
+	 <iframe style="float: right;" width="40%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/165562383&amp;color={{ page.fg-color }}&amp;inverse=true&amp;auto_play=false&amp;show_user=true"></iframe>
+	 <span style="float: left;"><a href="{{ site.cdn-base }}{{ site.podcast-base }}{{ page.filename }}" title="{{ page.title }}" target="_blank">Download now &rarr;</a></p></div>
 	  
-  <img src="{{ site.cdn-base }}{{ site.image-base }}{{ page.id }}{{ site.image-extension }}" alt="{{ title }}" width="250px" style="float: left;" />
+  <img class="clear: both;" src="{{ site.cdn-base }}{{ site.image-base }}{{ page.id }}{{ site.image-extension }}" alt="{{ title }}" width="250px" style="float: left;" />
   {{ content }}
 </div>
