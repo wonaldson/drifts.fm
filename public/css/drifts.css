@@ -51,7 +51,7 @@ body {
 }
 
 html {
-  font-family: "telefon", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "telefon-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -381,7 +381,7 @@ nav.masthead-nav a:last-child {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "Telefon", Helvetica, Arial, sans-serif;
+  font-family: "telefon-web", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
 }

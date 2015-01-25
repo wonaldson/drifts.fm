@@ -3,8 +3,8 @@ layout: default
 ---
 
 <div class="page">
-  <h1 class="page-title">Show {{ page.show-id }}
-	  {% if show-guest != null %}<small>featuring {{ page.guest }}{% endif %}
-  </h1>
+  <h1 class="page-title">Show {{ page.show-id }}</h1>
+	  {% if page.guest != null %}<small>featuring {{ page.guest }}</small>{% endif %}
+  <img src="{{ site.cdn-base }}{{ site.image-base }}{{ page.show-id }}{{ site.image-extension }}" alt="{{ title }}" width="500" />
   {{ content }}
 </div>

@@ -1,6 +1,9 @@
+#local
+port: 3000
+
+
 # Dependencies
 markdown:         redcarpet
-highlights:       pygments
 
 # Permalinks
 permalink:        pretty
@@ -9,11 +12,11 @@ permalink:        pretty
 title:            Drifts
 tagline:          'The intelligent side of electronic music.'
 description:      'Bi-weekly intelligent electronic music radio show and podcast.'
-url:              http://next.drifts.fm
+url:              'http://next.drifts.fm'
 
 author:
   name:           'William Donaldson'
-  url:            https://twitter.com/wonaldson
+  url:            'https://twitter.com/wonaldson'
 
 paginate:         6
 paginate_path:    "news/page:num/"
@@ -22,13 +25,21 @@ paginate_path:    "news/page:num/"
 version:          1.0.0
 
 github:
-  repo:           https://github.com/wonaldson/drifts.fm
+  repo:           'https://github.com/wonaldson/drifts.fm'
 
 
 collections:
   shows:
     output: true
 
+# Drifts vars
+
 fg-color: "#FFFFFF"
 bg-color: "#000000"
 link-color: "#FF0000"
+
+cdn-base: "http://cdn.drifts.fm/"
+image-base: "images/"
+podcast-base: "podcasts/"
+image-extension: ".png"
+podcast-basename: "drifts%spodcast.mp3"
