@@ -21,6 +21,8 @@ author:
 paginate:         6
 paginate_path:    "news/page:num/"
 
+encoding:					'utf-8'
+
 # Custom vars
 version:          1.0.0
 
@@ -34,9 +36,9 @@ collections:
 
 # Drifts vars
 
-fg-color: "#050505"
-bg-color: "#FFFFFF"
-link-color: "#FF0000"
+fg-color: "050505"
+bg-color: "FFFFFF"
+link-color: "268bd2"
 
 cdn-base: "http://cdn.drifts.fm/"
 image-base: "images/"
