@@ -5,7 +5,8 @@ layout: default
 
 
 <div class="page">
-  <h1 class="page-title">Show {{ page.id }}{% if page.guest != null %} <small>featuring {{ page.guest }}</small>{% endif %}</h1>
+  <h1 class="page-title">Show {{ page.id }}</h1>
+  {% if page.guest != null %}<small>{{ page.guest }}</small>{% endif %}
 	  <p><a href="{{ site.cdn-base }}{{ site.podcast-base }}{{ page.filename }}" title="{{ page.title }}" target="_blank">Download now &rarr;</a></p>
 	  
   <img src="{{ site.cdn-base }}{{ site.image-base }}{{ page.id }}{{ site.image-extension }}" alt="{{ title }}" width="250px" style="float: left;" />

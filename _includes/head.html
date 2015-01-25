@@ -20,25 +20,29 @@
   
   <!-- Custom colors -->
   <style>
-	  body {
-		  background-color: {{ include.bg-color }};
-		  color: {{ include.fg-color }}; 
+	  * {
+		  background-color: {{ include.bg-color }} !important;
+		  color: {{ include.fg-color }} !important; 
 	  }  
 	  h1, h2, h3, h4, h5, h6 {
-		  color: {{ include.fg-color }};
+		  color: {{ include.fg-color }} !important;
 	  }
 	  
 	  small {
-		  color: {{ include.fg-color }};
-		  opacity: 0.8;
-		  font-weight: normal;
+		  color: {{ include.fg-color }} !important;
+		  opacity: 0.8 !important;
+		  font-weight: normal !important;
 	  }
 	  h1 small {
 		  font-size: 50% !important;
 		  font-weight: normal !important;
+		  margin-bottom: 0;
 	  }
 	  a {
-		  color: {{ include.link-color }};
+		  color: {{ include.link-color }} !important;
+	  }
+	  h3.masthead-title, h3.masthead-title a, h3.masthead-title small {
+		  color: {{ include.fg-color }} !important;
 	  }
 	</style>
   

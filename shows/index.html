@@ -2,15 +2,34 @@
 layout: default
 title: Shows
 show-in-menu: true
+pagination: 6
 ---
 
 <div class="show-listing">
 	{% for show in site.shows %}
-	<div class="sl-item" style="background-color:{{ show.bg-color }};">
+	<div class="sl-item" style="background: {{ show.bg-color }} !important; color: {{ show.fg-color }} !important">
 	<a href="{{ show.url }}">
-		<h1 style="color: {{ show.fg-color }} !important">Show {{ show.id }}</h1>
-		{% if show.guest != null %} <small style="color: {{ show.fg-color }} !important">featuring {{ show.guest }}</small>{% endif %}
-		<img src="{{ site.cdn-base }}{{ site.image-base }}{{ show.id }}{{ site.image-extension }}" alt="{{ title }}" width="200" />
+		<img src="{{ site.cdn-base }}{{ site.image-base }}{{ show.id }}{{ site.image-extension }}" alt="{{ title }}" width="100%" />
+		<p><strong>Show {{ show.id }}</strong>
+		{% if show.guest != null %} <small>featuring {{ show.guest }}</small>{% endif %}</p>
 	</a>
 	</div>
 	{% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
