@@ -15,7 +15,8 @@ author:
   name:           'William Donaldson'
   url:            https://twitter.com/wonaldson
 
-paginate:         1
+paginate:         6
+paginate_path:    "posts/page:num/"
 
 # Custom vars
 version:          1.0.0
@@ -25,7 +26,8 @@ github:
 
 
 collections:
-- shows
+  shows:
+    output: true
 
 fg-color: "#FFFFFF"
 bg-color: "#000000"

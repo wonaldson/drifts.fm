@@ -5,10 +5,17 @@
         </h3>
         <nav class="masthead-nav">
 	        <a href="/">Home</a>
-	        <a href="/about/">About</a>
-	        <a href="/shows/">Shows</a>
-	        <a href="/posts/">Reviews</a>
-	        <a href="/listen/">Listen live</a>
+	        
+	        {% assign pages_list = site.pages %}
+					{% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" or node.show-in-menu == true %}
+            <a class="masthead-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
         </nav>
 	        
+	      {% assign latest-post = site.posts[0] %}
+				<p class="latest-news"><small>Latest news: <a href="{{ latest-post.url }}">{{ latest-post.title }} &rarr;</a></small></p>
       </div>

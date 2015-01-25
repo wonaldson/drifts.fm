@@ -4,7 +4,7 @@ layout: default
 
 <div class="page">
   <h1 class="page-title">Show {{ page.show-id }}
-	  {% if show-guest != null %}<small>featuring {{ show-guest }}{% endif %}
+	  {% if show-guest != null %}<small>featuring {{ page.guest }}{% endif %}
   </h1>
   {{ content }}
 </div>
