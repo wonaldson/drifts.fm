@@ -7,8 +7,8 @@ permalink:        pretty
 
 # Setup
 title:            Drifts
-tagline:          'The new side of electronic music.'
-description:      'Bi-weekly electronic music radio show and podcast.'
+tagline:          'The intelligent side of electronic music.'
+description:      'Bi-weekly intelligent electronic music radio show and podcast.'
 url:              http://next.drifts.fm
 
 author:
@@ -16,7 +16,7 @@ author:
   url:            https://twitter.com/wonaldson
 
 paginate:         6
-paginate_path:    "posts/page:num/"
+paginate_path:    "news/page:num/"
 
 # Custom vars
 version:          1.0.0
