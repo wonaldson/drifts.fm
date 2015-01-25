@@ -14,8 +14,26 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/drifts.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/Carrosserie.css">
+  
+  <!-- Custom colors -->
+  <style>
+	  body {
+		  {% if page.bg-color %}
+		  background-color: {{ page.bg-color }} !important;
+		  {% endif %}{% if page.fg-color %}
+		  color: {{ page.fg-color }} !important;
+		  {% endif %}
+	  }  
+	  a {
+		  {% if page.link-color %}
+		  color: {{ page.link-color }} !important;
+		  {% endif %}
+	  }
+	</style>
+  
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
@@ -23,4 +41,8 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  
+  <!-- Webfonts -->
+ 	<script type="text/javascript" src="http://use.typekit.com/ils5btr.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
