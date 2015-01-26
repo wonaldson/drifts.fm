@@ -6,18 +6,24 @@ title: Home
 <h1>Welcome to <span class="drifts-logo">Drifts</span>.</h1>
 <p>The stuff that makes your ears tingle, your mind wander, and your heart race.</p>
 
+{% assign shows = site.shows | sort:'date' | reverse %}{% assign show = shows.first %}
 
-<div class="fp-block">
-	<h4 class="fp-block-title">Latest show:</h4>
-	{% for show in site.shows %}
-	<div class="sl-item" style="background: {{ show.bg-color }} !important; color: {{ show.fg-color }} !important">
+<h3>Latest show:</h3>
+<div class="fp-block" style="background: {{ show.bg-color }} !important; color: {{ show.fg-color }} !important">
 	<a href="{{ show.url }}">
-		<img src="{{ site.cdn-base }}{{ site.image-base }}{{ show.id }}{{ site.image-extension }}" alt="{{ title }}" width="100%" />
-		<p color="{{show.fg-color}}"><strong>Show {{ show.id }}</strong>
-		{% if show.guest != null %} <small>{{ show.guest }}</small>{% endif %}</p>
+	
+		<img src="{{ site.cdn-base }}{{ site.image-base }}{{ show.id }}{{ site.image-extension }}" alt="{{ title }}" />
+		<div class="fp-text">
+			<p color="{{show.fg-color}}"><strong>Show {{ show.id }}</strong>
+			{% if show.guest != null %} <small>{{ show.guest }}</small>{% endif %}</p>
+			<p><small><small>Released {{ show.date | date:"%B %-d, %Y" }}</small></small></p>
+		</div>
+		<div class="clearfix"></div>
 	</a>
-	</div>
-	{% endfor %}
 </div>
+
+
+
+<p><a href="/shows/" title="More shows">View more from the back catalog &rarr;</a></p>
 
 
