@@ -383,7 +383,16 @@ div.sl-item a {
 	background-color: inherit;
 
 }
+.fp-block a:hover {
+	color: inherit;
+}
 .fp-block a > *, .fp-block  a > * > * {
+	color: inherit;
+}
+.fp-block p {
+	color: inherit;
+}
+.fp-block small {
 	color: inherit;
 }
 .fp-block img {

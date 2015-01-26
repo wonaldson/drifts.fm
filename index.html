@@ -13,8 +13,8 @@ title: Home
 	<a href="{{ show.url }}">
 	
 		<img src="{{ site.cdn-base }}{{ site.image-base }}{{ show.id }}{{ site.image-extension }}" alt="{{ title }}" />
-		<div class="fp-text">
-			<p color="{{show.fg-color}}"><strong>Show {{ show.id }}</strong>
+		<div class="fp-text" style="color: {{ show.fg-color }}">
+			<p><strong>Show {{ show.id }}</strong>
 			{% if show.guest != null %} <small>{{ show.guest }}</small>{% endif %}</p>
 			<p><small><small>Released {{ show.date | date:"%B %-d, %Y" }}</small></small></p>
 		</div>
