@@ -6,9 +6,12 @@ pagination: 6
 ---
 
 <div class="show-listing">
-	{% for show in site.shows | sort:'date' %}
+	
+	{% assign sshows = site.shows | sort:'date' | reverse %}
+	{% for show in sshows %}
 	<div class="sl-item" style="background: {{ show.bg-color }} !important; color: {{ show.fg-color }} !important">
 	<a href="{{ show.url }}">
+		<p><small>{{ show.date | date:"%B %-d, %Y" }}</small></p>
 		<img src="{{ site.cdn-base }}{{ site.image-base }}{{ show.id }}{{ site.image-extension }}" alt="{{ title }}" width="100%" />
 		<p color="{{show.fg-color}}"><strong>Show {{ show.id }}</strong>
 		{% if show.guest != null %} <small>{{ show.guest }}</small>{% endif %}</p>
