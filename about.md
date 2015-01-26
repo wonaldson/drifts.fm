@@ -12,7 +12,7 @@ The show returned to FM airwaves on WFNP, out of New Paltz, NY, on February 1st,
 
 ## About the DJ
 
-Will is a student at SUNY New Paltz in beautiful upstate New York who loves music, seltzer, and you. Check out his [website](http://williamdonaldson.me), and follow him on [Twitter](https://twitter.com/wonaldson)
+Will is a student at SUNY New Paltz in beautiful upstate New York who loves music, seltzer, and you. Check out his [website](http://williamdonaldson.me), and follow him on [Twitter](https://twitter.com/wonaldson) and [Facebook](https://facebook.com/wonaldson).
 
 ## Credits
 
