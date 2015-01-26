@@ -316,6 +316,10 @@ div.show-listing {
 
 }
 
+h1.show-head {
+	line-height: 0.9;
+	margin-bottom: 1rem;
+}
 div.sl-item {
 	float: left;
 	width: 11.333rem;
@@ -324,8 +328,12 @@ div.sl-item {
 	margin-bottom: 1rem;
 	margin-right: 1rem;
 }
-div.sl-item:nth-child(3) {
+div.sl-item:nth-child(3n+2) {
 	margin-right: 0;
+}
+
+div.sl-item:nth-child(3n+0) {
+	clear: both;
 }
 div.sl-item a > *, div.sl-item a > * > * {
 	color: inherit;
@@ -343,7 +351,8 @@ div.sl-item a {
 }
 
 
-.sc-embed {
+.sc-embed { 
+	width: 24rem;
 	float: right;
 	margin-top: 5px;
 }
@@ -355,6 +364,7 @@ div.sl-item a {
 	clear: both;
 	float: left;
 	margin-right: 1rem;
+	width: 11rem;
 }
 
 .fp-block {
@@ -463,6 +473,10 @@ div.sl-item a {
 	clear: both;
 }
 
+.halftone {
+	opacity: 50%;
+}
+
 /*
  * Pagination
  *
@@ -527,4 +541,14 @@ a.pagination-item:hover {
 span.copy {
 	font-size: larger;
 	vertical-align: sub;
+}
+
+/******
+	iPhone support
+	******/
+	
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+		
 }
