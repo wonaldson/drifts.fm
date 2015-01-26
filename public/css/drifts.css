@@ -468,6 +468,7 @@ a.pagination-item:hover {
 
 
 .footer {
+	clear: both;
 }
 .footer p {
 	font-size: 75%;
