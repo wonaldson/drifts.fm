@@ -1,52 +1,24 @@
 ---
 layout: default
 title: Home
-paginate: 1
+paginate: 6
 ---
 
 <h1>Welcome to <span class="drifts-logo">Drifts</span>.</h1>
-
+<p>The stuff that makes your ears tingle, your mind wander, and your heart race.</p>
 
 
 <div class="fp-block">
 	<h4 class="fp-block-title">Latest show:</h4>
-	<img src="">
-
-
-
-
-
-{% comment %}
-<div class="posts">
-  {% for post in pagination.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
-  </div>
-  {% endfor %}
+	{% for show in site.shows %}
+	<div class="sl-item" style="background: {{ show.bg-color }} !important; color: {{ show.fg-color }} !important">
+	<a href="{{ show.url }}">
+		<img src="{{ site.cdn-base }}{{ site.image-base }}{{ show.id }}{{ site.image-extension }}" alt="{{ title }}" width="100%" />
+		<p color="{{show.fg-color}}"><strong>Show {{ show.id }}</strong>
+		{% if show.guest != null %} <small>{{ show.guest }}</small>{% endif %}</p>
+	</a>
+	</div>
+	{% endfor %}
 </div>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
-{% endcomment %}
+
