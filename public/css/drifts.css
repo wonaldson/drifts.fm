@@ -321,18 +321,16 @@ h1.show-head {
 	margin-bottom: 1rem;
 }
 div.sl-item {
-	float: left;
-	width: 11.333rem;
-	padding: 0.5rem;
-	border-radius: 1rem;
-	margin-bottom: 1rem;
-	margin-right: auto;
-}
-div.sl-item:nth-child(3n+2) {
-	margin-right: 0;
+float: left;
+width: 11rem;
+padding: 0.5rem;
+border-radius: 1rem;
+margin-bottom: 1rem;
+margin-right: 0.5rem;
+ margin-left: 0.5rem;
 }
 
-div.sl-item:nth-child(3n+0) {
+div.sl-item:nth-child(3n+4) {
 	clear: both;
 }
 div.sl-item a > *, div.sl-item a > * > * {
@@ -557,9 +555,16 @@ and (max-device-width : 568px) {
 	}
 	
 	div.sl-item {
-		width: 10.5rem;
+		width: 10rem;
 		font-size: 125%;
 		margin-right: auto;
+		margin-left: auto;
 	}
+	div.sl-item:nth-child(3n+4) {
+	clear: none;
+}
+div.sl-item:nth-child(2n+3) {
+	clear: both;
+}
 }
 }
