@@ -322,7 +322,7 @@ h1.show-head {
 }
 div.sl-item {
 float: left;
-width: 11rem;
+max-width: 11rem;
 padding: 0.5rem;
 border-radius: 1rem;
 margin-bottom: 1rem;
