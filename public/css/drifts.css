@@ -301,6 +301,9 @@ tbody tr:nth-child(odd) th {
 
 /* Nav */
 
+nav.masthead-nav * {
+	font-size: 90%;
+}
 nav.masthead-nav a {
 	padding-right: 1rem;
 }
