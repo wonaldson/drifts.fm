@@ -38,7 +38,8 @@ collections:
 # Drifts vars
 
 fg-color: "#0993FF"
-bg-color: "#f4f8f2"
+#bg-color: "#f4f8f2"
+bg-color: "#000"
 link-color: "#268bd2"
 
 cdn-base: "http://cdn.drifts.fm/"
