@@ -339,7 +339,10 @@ div.sl-item a > *, div.sl-item a > * > * {
 
 div.sl-item p {
 	line-height: 1.125;
-	margin-bottom: 0.125rem;
+	margin: 0.125rem 0;
+}
+div.sl-item img {
+	margin: 0.125rem 0;
 }
 div.sl-item a {
 	text-decoration: none !important;
@@ -350,7 +353,7 @@ div.sl-item a {
 
 
 .sc-embed { 
-	max-width: 24rem;
+	width: 24rem;
 	float: right;
 	margin-top: 5px;
 }
