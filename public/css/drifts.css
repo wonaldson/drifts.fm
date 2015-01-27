@@ -555,10 +555,10 @@ and (max-device-width : 568px) {
 	}
 	
 	div.sl-item {
-		width: 9rem;
+		width: 10rem;
 		font-size: 125%;
-		margin-right: 0.5em;
-		margin-left: 0.5em;
+		margin-right: 0.5rem;
+		margin-left: 0.5rem;
 	}
 	div.sl-item:nth-child(3n+4) {
 	clear: none;
