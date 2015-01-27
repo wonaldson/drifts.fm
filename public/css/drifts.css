@@ -557,6 +557,7 @@ and (max-device-width : 568px) {
 	}
 	
 	div.sl-item {
-		width: 100%;
+		width: 50%;
+		font-size: 125%;
 	}
 }
