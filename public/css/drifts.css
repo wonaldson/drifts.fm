@@ -352,10 +352,11 @@ div.sl-item a {
 
 
 .sc-embed { 
-	width: 24rem;
+	max-width: 24rem;
 	float: right;
 	margin-top: 5px;
 }
+
 
 .dl-link {
 }
@@ -550,5 +551,12 @@ span.copy {
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 568px) {
-		
+	.sc-embed {
+		width: 90%;
+		float: none;
+	}
+	
+	div.sl-item {
+		width: 100%;
+	}
 }
