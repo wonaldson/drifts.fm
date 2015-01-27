@@ -8,7 +8,7 @@ show-in-menu: true
 	
 	{% assign sshows = site.shows | sort:'date' | reverse %}
 	{% for show in sshows %}
-	{% capture image %}{{site.cdn-base}}{{site.image-base}}{{show.sid}}{{site.image-extension}}{% endcapture %}
+	{% capture image %}{{site.cdn-base}}{{site.image-base}}500/{{show.sid}}{{site.image-extension}}{% endcapture %}
 	<div class="sl-item" style="background: {{ show.bg-color }} !important; color: {{ show.fg-color }} !important">
 	<a href="{{ show.url }}">
 		<p><small>{{ show.date | date:"%B %-d, %Y" }}</small></p>

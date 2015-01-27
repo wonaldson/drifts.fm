@@ -3,7 +3,7 @@ layout: default
 show-dark: false
 comments: true
 ---
-{% capture image %}{{site.cdn-base}}{{site.image-base}}{{page.sid}}{{site.image-extension}}{% endcapture %}
+{% capture image %}{{site.cdn-base}}{{site.image-base}}1000/{{page.sid}}{{site.image-extension}}{% endcapture %}
 
 <div class="page">
   <h1 class="show-head">Show {{ page.sid }}  {% if page.guest != null %}<small>{{ page.guest }}</small>{% endif %}</h1>
