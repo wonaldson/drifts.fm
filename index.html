@@ -7,23 +7,38 @@ title: Home
 <p>Music that makes your ears tingle, your mind wander, and your heart race.</p>
 
 {% assign shows = site.shows | sort:'date' | reverse %}{% assign show = shows.first %}
+{% assign post = site.posts.first %} 
 
 <h3>Latest show:</h3>
-<div class="fp-block" style="background: {{ show.bg-color }} !important; color: {{ show.fg-color }} !important">
+<div class="fp-block fp-show" style="background: {{ show.bg-color }} !important; color: {{ show.fg-color }} !important">
 	<a href="{{ show.url }}">
 	
 		<img src="{{ site.cdn-base }}{{ site.image-base }}500/{{ show.sid }}{{ site.image-extension }}" alt="{{ title }}" />
 		<div class="fp-text" style="color: {{ show.fg-color }}">
-			<p><strong>Show {{ show.sid }}</strong>
-			{% if show.guest != null %} <small>{{ show.guest }}</small>{% endif %}</p>
-			<p><small><small>Released {{ show.date | date:"%B %-d, %Y" }}</small></small></p>
+			<h2>Show {{ show.sid }}
+			{% if show.guest != null %} <small>{{ show.guest }}</small>{% endif %}</h2>
+			<p><small>Released {{ show.date | date:"%B %-d, %Y" }}</small></p>
+		</div>
+		<div class="clearfix"></div>
+	</a>
+</div>
+
+<p><a href="/shows/" title="More shows">View more from the back catalog &rarr;</a></p>
+
+<h3>Latest news:</h3>
+<div class="fp-block" style="background: {{ post.bg-color }} !important; color: {{ post.fg-color }} !important">
+	<a href="{{ post.url }}">
+		<div class="fp-text" style="color: {{ post.fg-color }}">
+			<h2>{{ post.title }}
+			{% if post.subtitle != null %} <small>{{ post.subtitle }}</small>{% endif %}</h2>
+			<p><small>Posted {{ post.date | date:"%B %-d, %Y" }}</small></p>
+			{{ post.excerpt }} <a href="{{ post.url }}" title="Keep reading">Read more &rarr;</a>
 		</div>
 		<div class="clearfix"></div>
 	</a>
 </div>
 
 
-
-<p><a href="/shows/" title="More shows">View more from the back catalog &rarr;</a></p>
+<p><a href="/news/" title="More shows">View more news &rarr;</a></p>
 
 
