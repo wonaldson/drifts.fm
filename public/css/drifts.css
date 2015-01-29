@@ -340,7 +340,8 @@ div.sl-item {
 		margin-left: 0.75rem;
 }
 
-@media (min-width: 38rem) {
+@media (min-width: 38rem) 
+	or (orientation: portrait) {
 	
 	div.sl-item {
 		max-width: 11rem;
@@ -641,8 +642,6 @@ and (max-device-width : 667px) {
 		width: 90%;
 		float: none;
 	}
-	.container.content {
-	}
 	div.sl-item {
 		font-size: 120%;
 		width: 10.1875rem;
@@ -665,3 +664,18 @@ and (max-device-width : 667px) {
 	}
 	
 }
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px)
+and (orientation : portrait) {
+	div.sl-item {
+		width: 10rem;
+	}
+}
+
+/******
+	iPhone 6 Plus support
+	******/
+	
+	
