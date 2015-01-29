@@ -331,16 +331,19 @@ h1.show-head {
 	margin-bottom: 1rem;
 }
 
-@media (min-width: 38rem) {
-	
-	div.sl-item {
+div.sl-item {
 		float: left;
-		max-width: 11rem;
 		padding: 0.5rem;
 		border-radius: 1rem;
 		margin-bottom: 1rem;
 		margin-right: 0.75rem;
 		margin-left: 0.75rem;
+}
+
+@media (min-width: 38rem) {
+	
+	div.sl-item {
+		max-width: 11rem;
 	}
 	div.sl-item:nth-child(3n+1) {
 		margin-left: 0;
@@ -608,7 +611,7 @@ and (max-device-width : 568px) {
 	}
 	
 	div.sl-item {
-		width: 9.5rem;
+		width: 9rem;
 		font-size: 125%;
 	}
 	div.sl-item:nth-of-child(2n+1){
