@@ -4,20 +4,26 @@ title: Home
 ---
 
 <h1>Welcome to <span class="drifts-logo">Drifts</span>.</h1>
-<p>Music that makes your ears tingle, your mind wander, and your heart race.</p>
+<p>Find the music that makes your ears tingle, your mind wander, and your heart race.</p>
 
 {% assign shows = site.shows | sort:'date' | reverse %}{% assign show = shows.first %}
 {% assign post = site.posts.first %} 
 
 <h3>Latest show:</h3>
-<div class="fp-block fp-show" style="background: {{ show.bg-color }} !important; color: {{ show.fg-color }} !important">
+<div class="fp-block fp-show" style="background: {{ show.bg-color }};">
+	<style type="text/css" scoped>
+		.fp-show .fp-text {
+			color: {{ show.fg-color }};
+		}
+	</style>
 	<a href="{{ show.url }}">
 	
 		<img src="{{ site.cdn-base }}{{ site.image-base }}500/{{ show.sid }}{{ site.image-extension }}" alt="{{ title }}" />
-		<div class="fp-text" style="color: {{ show.fg-color }}">
-			<h2>Show {{ show.sid }}
+		<div class="fp-text">
+			<h2 class="post-title">Show {{ show.sid }}
 			{% if show.guest != null %} <small>{{ show.guest }}</small>{% endif %}</h2>
-			<p><small>Released {{ show.date | date:"%B %-d, %Y" }}</small></p>
+			<p class="post-date"><small>Released {{ show.date | date:"%B %-d, %Y" }}</small></p>
+			<p class="listen-download">Listen and download &rarr;</p>
 		</div>
 		<div class="clearfix"></div>
 	</a>
@@ -26,16 +32,26 @@ title: Home
 <p><a href="/shows/" title="More shows">View more from the back catalog &rarr;</a></p>
 
 <h3>Latest news:</h3>
-<div class="fp-block" style="background: {{ post.bg-color }} !important; color: {{ post.fg-color }} !important">
-	<a href="{{ post.url }}">
-		<div class="fp-text" style="color: {{ post.fg-color }}">
-			<h2>{{ post.title }}
-			{% if post.subtitle != null %} <small>{{ post.subtitle }}</small>{% endif %}</h2>
-			<p><small>Posted {{ post.date | date:"%B %-d, %Y" }}</small></p>
-			{{ post.excerpt }} <a href="{{ post.url }}" title="Keep reading">Read more &rarr;</a>
-		</div>
-		<div class="clearfix"></div>
+<div class="fp-block fp-news " style="background: {{ post.bg-color }};">
+	<style type="text/css" scoped>
+		.fp-news .fp-link {
+			color: {{ post.link-color }} !important;
+		}
+		.fp-news .fp-text {
+			color: {{ post.fg-color }};
+		}
+		.fp-news .fp-text a:link {
+			color: {{ post.link-color }};
+		}
+	</style>
+	<a class="fp-link" href="{{ post.url }}">
+			<h2 class="post-title">{{ post.title }}{% if post.subtitle != null %} <small>{{ post.subtitle }}</small>{% endif %}</h2>
+			<p class="post-date"><small>Posted {{ post.date | date:"%B %-d, %Y" }}</small></p>
 	</a>
+	<div class="fp-text" style="color: {{ post.fg-color }}">
+	{{ post.excerpt }} {% if post.content != post.excerpt %}<a href="{{ post.url }}">Read more &rarr;</a>{% endif %}
+	</div>
+	<div class="clearfix"></div>
 </div>
 
 

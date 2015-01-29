@@ -330,14 +330,27 @@ h1.show-head {
 	line-height: 0.9;
 	margin-bottom: 1rem;
 }
-div.sl-item {
-float: left;
-max-width: 11rem;
-padding: 0.5rem;
-border-radius: 1rem;
-margin-bottom: 1rem;
-margin-right: 0.5rem;
- margin-left: 0.5rem;
+
+@media (min-width: 38rem) {
+	
+	div.sl-item {
+		float: left;
+		max-width: 11rem;
+		padding: 0.5rem;
+		border-radius: 1rem;
+		margin-bottom: 1rem;
+		margin-right: 0.75rem;
+		margin-left: 0.75rem;
+	}
+	div.sl-item:nth-child(3n+1) {
+		margin-left: 0;
+	}
+	div.sl-item:nth-child(3n+3) {
+		margin-right: 0;
+	}
+	div.sl-item:nth-child(3n+4) {
+		clear: both;
+	}
 }
 
 div.sl-item:nth-child(3n+4) {
@@ -393,9 +406,25 @@ div.sl-item a {
 .fp-block + .fp-show {
 		font-size: 150%;
 }
+.fp-show, .fp-news {
+	position: relative;
+}
+.fp-show .listen-download {
+	position: absolute;
+	bottom: 0.5rem;
+}
+@media (max-width: 30rem) {
+	.fp-show .listen-download {
+		display: none;
+	}
+}
 .fp-block .fp-text {
 	display: table-cell;
 	vertical-align: -webkit-baseline-middle;
+}
+.fp-block .fp-text::after {
+	clear: both;
+	content: &nbsp;
 }
 .fp-block .fp-text p:last-child {
 	margin-bottom: 0;
@@ -433,6 +462,9 @@ div.sl-item a {
 }
 .fp-block:after {
 	clear: both;
+}
+.fp-text p:last-of-child::after {
+	content: &hellip;
 }
 /*
  * Posts and pages
@@ -578,14 +610,14 @@ and (max-device-width : 568px) {
 	div.sl-item {
 		width: 9.5rem;
 		font-size: 125%;
-		margin-right: 0.5rem;
-		margin-left: 0.5rem;
 	}
-	div.sl-item:nth-child(3n+4) {
-	clear: none;
-}
-div.sl-item:nth-child(2n+3) {
-	clear: both;
-}
-}
+	div.sl-item:nth-of-child(2n+1){
+		margin-left: 0;
+	}
+	div.sl-item:nth-of-child(2n+2){
+		margin-right: 0;
+	}
+	div.sl-item:nth-of-child(2n+3) {
+		clear: both;
+	}
 }
