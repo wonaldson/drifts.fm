@@ -609,18 +609,24 @@ and (max-device-width : 568px) {
 		width: 90%;
 		float: none;
 	}
-	
 	div.sl-item {
-		width: 9rem;
-		font-size: 125%;
+		width: 8.5rem;
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
 	}
-	div.sl-item:nth-of-child(2n+1){
+
+	div.sl-item:nth-child(3n+4){
+		clear: none;
+	}
+	
+	div.sl-item:nth-child(odd){
 		margin-left: 0;
 	}
-	div.sl-item:nth-of-child(2n+2){
+	div.sl-item:nth-child(even){
 		margin-right: 0;
 	}
-	div.sl-item:nth-of-child(2n+3) {
+	div.sl-item:nth-child(2n+3) {
 		clear: both;
 	}
+	
 }
