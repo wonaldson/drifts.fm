@@ -67,7 +67,7 @@ body {
 }
 
 .drifts-logo {
-	font-family: "Carrosserie-Bold";
+	font-family: "Carrosserie-Bold", "telefon-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-style: normal;
 }
@@ -294,7 +294,7 @@ tbody tr:nth-child(odd) th {
   letter-spacing: 0;
 }
 
-@media (min-width: 38rem) {
+@media (min-width: 30rem) {
 	.masthead-title, .masthead-title * {
 		font-size: 140%;
 	}
@@ -306,7 +306,7 @@ tbody tr:nth-child(odd) th {
 }
 
 /* Nav */
-@media (min-width: 38rem) {
+@media (min-width: 30rem) {
 	nav.masthead-nav * {
 		font-size: 90%;
 	}
@@ -393,13 +393,13 @@ div.sl-item a {
 	clear: both;
 	float: left;
 	margin-right: 1rem;
-	width: 11rem;
+	width: 30.5%;
 }
 
 .fp-block {
 	height: 10rem;
 	width: 100%;
-	padding: 0.5rem;
+	padding: 1rem;
 	border-radius: 1rem;
 	height: 100%;
 	margin: 1rem 0;
@@ -409,6 +409,9 @@ div.sl-item a {
 }
 .fp-block + .fp-show {
 		font-size: 150%;
+}
+.fp-show img {
+	padding-right: 1rem;
 }
 .fp-show, .fp-news {
 	position: relative;
@@ -470,6 +473,13 @@ div.sl-item a {
 .fp-text p:last-of-child::after {
 	content: &hellip;
 }
+
+.email-subscribe input {
+	font-size: 125%;
+}
+.email-subscribe input[type="submit"]{
+	vertical-align: middle;
+}
 /*
  * Posts and pages
  *
@@ -496,7 +506,7 @@ div.sl-item a {
 /* Meta data line below post title */
 .post-date {
   display: block;
-  margin-top: -.5rem;
+  margin-top: -.25rem;
   margin-bottom: 1rem;
   opacity: 70%;
 }
@@ -599,6 +609,20 @@ span.copy {
 	vertical-align: sub;
 }
 
+
+/******
+	General mobile support
+	******/
+	
+@media only screen 
+and (min-device-width : 320px)
+and (max-device-width : 667px) {
+	
+	.email-subscribe input {
+		font-size: 150%;
+		width: 100%;
+	}
+}
 /******
 	iPhone 4/5 support
 	******/
@@ -668,7 +692,7 @@ and (max-device-width : 667px) {
 @media only screen 
 and (min-device-width : 375px) 
 and (max-device-width : 667px)
-and (orientation : portrait) {
+and (orientation : landscape) {
 	div.sl-item {
 		width: 10rem;
 	}

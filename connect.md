@@ -7,10 +7,10 @@ title: Connect
 	<p>
 		<label for="tlemail">Enter your email address to join our newsletter.</label>
 	</p>
-	<p style="height: 2rem;">
-		<input type="text" style="width:12rem;height:2rem;font-size:1rem;display:inline-block;" name="email" id="tlemail" />
+	<p class="email-subscribe">
+		<input type="text" name="email" id="tlemail" />
 	<input type="hidden" value="1" name="embed"/>
-	<input style="font-size:200%;vertical-align: middle;display:inline-block;" type="submit" value="Subscribe" />
+	<input type="submit" value="Subscribe" />
 		</p>
 	<p><small><a href="https://tinyletter.com" target="_blank">powered by TinyLetter</a></small></p>
 </form>

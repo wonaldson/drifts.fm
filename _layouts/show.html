@@ -7,7 +7,7 @@ comments: true
 
 <div class="page">
   <h1 class="show-head">Show {{ page.sid }}  {% if page.guest != null %}<small>{{ page.guest }}</small>{% endif %}</h1>
-  <small>Released {{ page.date | date:"%B %-d, %Y"}}</small>
+  <span class="post-date"><small>Released {{ page.date | date:"%B %-d, %Y"}}</small></span>
   <p class="dl-link">
   	<iframe class="sc-embed" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ page.sc-id }}&amp;color={{ page.fg-color | remove:'#' }}&amp;inverse={{ page.sc-invert }}&amp;auto_play=false&amp;show_user=true"></iframe>
 		<a href="{{ site.cdn-base }}{{ site.podcast-base }}{{ page.filename }}" title="{{ page.title }}" target="_blank">Download now &rarr;</a>
