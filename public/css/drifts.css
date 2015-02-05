@@ -340,8 +340,7 @@ div.sl-item {
 		margin-left: 0.75rem;
 }
 
-@media (min-width: 38rem) 
-	or (orientation: portrait) {
+@media (min-width: 760px) {
 	
 	div.sl-item {
 		max-width: 11rem;
@@ -356,6 +355,23 @@ div.sl-item {
 		clear: both;
 	}
 }
+
+@media (min-width: 30rem) and (max-width: 759px) {
+	div.sl-item {
+		max-width: 12rem;
+	}
+	div.sl-item:nth-child(odd) {
+		margin-left: 0;
+	}
+	div.sl-item:nth-child(even) {
+		margin-right: 0;
+	}
+	div.sl-item:nth-child(2n+3) {
+		clear: both;
+	}
+}
+
+
 
 div.sl-item:nth-child(3n+4) {
 	clear: both;
@@ -386,6 +402,16 @@ div.sl-item a {
 }
 
 
+.mc-embed {
+	width: 100%;
+	clear: both;
+	margin-top: 0.25rem;
+}
+
+.mc-link {
+	float: right;
+}
+
 .dl-link {
 }
 
@@ -399,7 +425,7 @@ div.sl-item a {
 .fp-block {
 	height: 10rem;
 	width: 100%;
-	padding: 1rem;
+	padding: .5rem 1rem;
 	border-radius: 1rem;
 	height: 100%;
 	margin: 1rem 0;
