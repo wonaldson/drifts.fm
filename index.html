@@ -6,9 +6,33 @@ title: Welcome
 <h1>Welcome to <span class="drifts-logo">Drifts</span>.</h1>
 <p>Find the music that makes your ears tingle, your mind wander, and your heart race.</p>
 
-{% assign shows = site.shows | sort:'date' | reverse %}{% assign show = shows.first %}
+{% assign shows = site.shows | sort:'date' | reverse %}{% assign show = shows.first %}{% assign show2 = shows[1] %}
 {% assign post = site.posts.first %} 
+{% capture curtime %}{{ site.time | date: '%s' }}{% endcapture %}
+{% capture posttime %}{{ show.date | date: '%s' }}{% endcapture %}
 
+{% if curtime <= posttime %}
+<h3>Next show:</h3>
+<div class="fp-block fp-show" style="background: {{ show.bg-color }};">
+	<style type="text/css" scoped>
+		.fp-show .fp-text {
+			color: {{ show.fg-color }};
+		}
+	</style>
+	<a href="{{ show.url }}">
+	
+		<img src="{{ site.cdn-base }}{{ site.image-base }}500/{{ show.sid }}{{ site.image-extension }}" alt="{{ title }}" />
+		<div class="fp-text">
+			<h2 class="post-title">Show {{ show.sid }}
+			{% if show.guest != null %} <small>{{ show.guest }}</small>{% endif %}</h2>
+			<p class="post-date"><small>Releasing {{ show.date | date:"%B %-d, %Y" }}</small></p>
+			<p class="listen-download">More information &rarr;</p>
+		</div>
+		<div class="clearfix"></div>
+	</a>
+</div>
+{% assign show = show2 %}
+{% endif %}
 <h3>Latest show:</h3>
 <div class="fp-block fp-show" style="background: {{ show.bg-color }};">
 	<style type="text/css" scoped>
@@ -29,7 +53,7 @@ title: Welcome
 	</a>
 </div>
 
-<p><a href="/shows/" title="More shows">View more from the back catalog &rarr;</a></p>
+<p><a href="/shows/" title="More shows">Explore more from the back catalog &rarr;</a></p>
 
 <h3>Latest news:</h3>
 <div class="fp-block fp-news " style="background: {{ post.bg-color }};">

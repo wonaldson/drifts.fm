@@ -41,6 +41,8 @@ fg-color: "#0993FF"
 bg-color: "#f4f8f2"
 link-color: "#268bd2"
 
+
+blubrry-base: "http://media.blubrry.com/drifts/cdn.drifts.fm/"
 cdn-base: "http://cdn.drifts.fm/"
 image-base: "images/"
 podcast-base: "podcasts/"
