@@ -7,8 +7,8 @@ comments: true
 
 {% if page.date <= site.date %}{% assign reltext = "Releasing" %}{% else %}{% assign reltext = "Released" %}{% endif %}
 <div class="page">
-  <h1 class="show-head">Show {{ page.sid }}{% if page.guest != null %} <small>{{ page.guest }}</small>{% endif %}</h1>
-  <span class="post-date"><small>{{reltext}} {{ page.date | date:"%B %-d, %Y"}}</small></span>
+  <h1 class="post-title">Show {{ page.sid }}{% if page.guest != null %} <small>{{ page.guest }}</small>{% endif %}</h1>
+  <span class="post-date">{{reltext}} {{ page.date | date:"%B %-d, %Y"}}</span>
   <p class="dl-link">
 	  {% if page.sc-id %}
   	<iframe class="sc-embed" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ page.sc-id }}&amp;color={{ page.fg-color | remove:'#' }}&amp;inverse={{ page.sc-invert }}&amp;auto_play=false&amp;show_user=true"></iframe>
@@ -16,7 +16,7 @@ comments: true
 		<a href="{{ site.cdn-base }}{{ site.podcast-base }}{{ page.filename }}" title="{{ page.title }}" target="_blank">Download now &rarr;</a>
 		{% if page.mc-url %}
 		<a class="mc-link" href="{{ page.mc-url }}" title="Show {{page.sid}} on Mixcloud" target="_blank">Listen on Mixcloud &rarr;</a>
-  	<iframe class="mc-embed" height="60" src="https://www.mixcloud.com/widget/iframe/?feed={{ page.mc-url }}&amp;mini=1&amp;embed_uuid={{ page.mc-uuid }}&amp;replace=0&amp;hide_cover=1&amp;embed_type=widget_standard&amp;hide_tracklist=1" frameborder="0"></iframe>
+  	<iframe seamless="true" class="mc-embed" height="60" src="https://www.mixcloud.com/widget/iframe/?feed={{ page.mc-url }}&amp;mini=1&amp;embed_uuid={{ page.mc-uuid }}&amp;replace=0&amp;hide_cover=1&amp;embed_type=widget_standard&amp;hide_tracklist=1" frameborder="0"></iframe>
   	{% endif %}
   </p>
 
