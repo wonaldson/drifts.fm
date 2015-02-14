@@ -444,8 +444,6 @@ div.sl-item a {
 	position: relative;
 }
 .fp-show .listen-download {
-	position: absolute;
-	bottom: 0.5rem;
 }
 @media (max-width: 30rem) {
 	.fp-show .listen-download {
@@ -453,13 +451,11 @@ div.sl-item a {
 	}
 }
 .fp-block .fp-text {
-	display: table-cell;
+	display: block;
 	vertical-align: -webkit-baseline-middle;
 }
-.fp-block .fp-text::after {
-	clear: both;
-	content: &nbsp;
-}
+
+
 .fp-block .fp-text p:last-child {
 	margin-bottom: 0;
 	padding-bottom: 0;
