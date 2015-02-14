@@ -23,4 +23,4 @@ title: Connect
 
 ## Or by electronic mail:
 
-* [driftsradio@gmail.com](mailto:driftsradio@gmail.com?title=Hey!)
+* [will@drifts.fm](mailto:will@drifts.fm?title=Hey!)
